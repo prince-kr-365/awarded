@@ -1,0 +1,93 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html,body{
+   /* font-size: 120px;*/
+    width: 100%;
+    height: 100%;
+}
+
+ #practice{
+    font-size: 12px;
+      width: 2rem;  /* if em used here then it will see current element font size which is is 12 px means width of box will be 12 * 2 px and if currnrt element font size not given then it will go above html font size
+      AND if rem is used currently means it will see html above one font size which is 120 px means box width will be 120*2 px not depend on current element font size px  */
+    height: 2rem; 
+    background-color: red;
+}
+ p{
+    display: inline-block;   /* if display inline then elements will be in same line but cannot increase height auer width but if we use display inline block  then we can increase height width and if display block then up and down will be elements  */
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+} 
+
+#car{
+    display: flex;
+ justify-content: space-between;
+    justify-content: center;   /*changes along x axis ...main axis*/
+    align-items: centre;  /*changes along y axis...cross axis*/
+    height: 500x;
+    width: 500px;
+    background-color: skyblue;
+}
+
+#car1{
+    height: 100px;
+    width: 50px;
+    background-color: orange;
+}
+#car2{
+   /* top: 20px;*/
+  /*  position: absolute; */ /* position  absolute means this car2 will rise above upto level  2 and can move anywhere in the screen  and in below vacant space of car2 car3 will come means niche wala ele will shift in that place  */
+    height: 60px;
+    width: 30px;
+    background-color: blue;
+}
+#car3{
+  /*  position: absolute; */ /*it will be at level 3 higher means above the car2 if given absolute*/
+    height: 150px;
+    width: 200px;
+    background-color: green;
+}
+
+#box{
+    position: relative;     /*  position relative means  the cube inside the box will move inside the box if you give box ko left 20 % then it will be refrence to boxi.e box se left se 20% cube will move if given this feature is given to cube and if position relative not given then cube will move with refrence to screen  */
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+} 
+#cube{
+    left: 20%;      /* it will move 20% left of box bec. above position relative is told if not then it will move according to screen as we have done i previous */
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: darkblue;
+}
+
+#img{
+    width: 300px;
+    height: 300px;
+    background: url(https://images.unsplash.com/photo-1747106649672-c17636e6c6a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8);
+    background-size: cover;   /* cover means img will try to cover whole div but not whole img will cover div bec. of div size if we give small  and if  contain then whole img will be there jabardasti and it will repeat also so better to use cover and position whatever you want i give centre to see*/
+    background-position: center;
+
+} 
+
+#colorbox{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right red ,yellow);
+}
+
+h1::first-line{
+    color: brown;
+}
+h1::first-letter{
+    font-size: 120px;
+}
+h1::selection{
+    color: greenyellow;
+}

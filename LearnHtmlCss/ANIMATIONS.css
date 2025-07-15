@@ -1,0 +1,92 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+}
+#box1{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    position: relative;
+    animation-name: box-anime;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+#box2{
+     height: 300px;
+    width: 300px;
+    background-color: cyan;
+    position: relative;
+     animation-name: box-anime;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+@keyframes box-anime {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 75%;
+    }
+}
+
+#hi p{
+    font-size: 50px;
+    color: red;
+}
+p::after{
+    content: "    and dostiniyo";
+    color: blue;
+    font-size: 100px;
+}
+
+#box{
+    height: 1000px;
+    width: 1000px;
+    background-color:rebeccapurple;
+    font-size: 100px;
+}
+#box::before{       /* box before means not originally box before it means box ka content ke before that is content = hello, ke before*/
+    content: "kaise ho";
+    font-size: 200px;
+}
+body{
+    background-color: black;
+    padding: 5vw;
+}
+button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid cyan;
+    color: cyan;
+    position: relative;
+}
+button::after{
+    content: "";
+    height: 100%;
+    width: 00%;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all linear 0.5s;
+    z-index: -1;
+}
+button:hover::after{
+    width: 100%;
+}
+button:hover{
+    columns: black;
+}
